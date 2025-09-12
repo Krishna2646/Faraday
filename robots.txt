@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://faraday-jntugv.vercel.app/sitemap.xml
+
