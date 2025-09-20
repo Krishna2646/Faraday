@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="f7ILGVqQ7FT-6HagtB0D4q5adGJ5WJuciN2P8zkwsfs" />
+    <meta name="google-site-verification" content="f7ILGVqQ7FT-6HagtB0D4q5adGJ5WJuciN2P8zkwsfs" />
 
     <link rel="icon" type="image/png" href="https://eeeeventjntugvcev.com/joncarter-portfolio-main/assets/images/Far.png">
 
@@ -51,6 +51,90 @@
         }
         .card-footer {
             border-top: 1px solid #e2e8f0;
+        }
+
+        /* --- STYLISH TIMELINE CSS --- */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #cbd5e1;
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            margin-bottom: 50px;
+        }
+        .timeline-item:nth-child(odd) {
+            padding-right: 30px;
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            padding-left: 30px;
+            left: 50%;
+        }
+        .timeline-dot {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #4f46e5;
+            border: 3px solid #f8f9fa;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+        .timeline-content {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: scale(1.03);
+        }
+        .timeline-content-overlay {
+            border-radius: 12px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Responsive timeline for smaller screens */
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 10px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 0;
+                text-align: left;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0%;
+                padding-left: 40px;
+            }
+            .timeline-item:nth-child(odd) .timeline-dot {
+                left: 0;
+            }
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 0;
+            }
         }
     </style>
 
@@ -113,10 +197,8 @@
                     </p>
                 </div>
                 <div class="md:w-2/5 flex items-center justify-center mt-8 md:mt-0">
-
                     <div class="relative w-72 h-80 rounded-2xl shadow-2xl overflow-hidden group">
                         <img src="https://i.guim.co.uk/img/media/abffc68f38357082e669f2227a6310740d982f25/0_214_2710_1626/master/2710.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ba8e077ee3ba519b878dd7d94eb7c64f" alt="Michael Faraday" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-
                         <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 text-white text-center">
                             <h3 class="text-xl font-bold">September 22, 2025</h3>
                             <p class="text-sm font-semibold">Venue: JNTU-GV Campus</p>
@@ -134,7 +216,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
                     <a href="https://forms.gle/nxAYBPqoszgjXwKT9" target="_blank" class="event-card bg-gradient-to-br from-blue-50 to-white">
                         <div class="p-6 card-content">
                             <h4 class="text-2xl font-bold text-blue-800 mb-2">INNOVISTA</h4>
@@ -174,10 +255,113 @@
                             <p class="text-sm font-semibold text-gray-700">Entry Fee: ₹50 (per person), ₹80 (for 2)</p>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Invitation Brochure</h3>
+                    <p class="text-gray-600 mt-2">View the official invitation brochure for the event below.</p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-full max-w-4xl shadow-2xl rounded-lg overflow-hidden">
+                      <iframe src="https://drive.google.com/file/d/1lZJclqVGjHGPr4y2R6a5Eaz6eOb6USrE/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl font-bold text-gray-800">Event Timeline</h3>
+                    <p class="text-gray-600 mt-2">Follow the day's schedule of exciting events!</p>
+                </div>
+                
+                <div class="relative timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/493635/circuit-board.svg'); background-size: 200px; background-position: bottom -40px right -50px;">
+                            <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-indigo-600">09:00 AM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">INNOVISTA</h4>
+                                <p class="text-gray-600 text-sm mt-2">Showcasing innovative ideas, projects, and talents.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/494951/paint-brush-and-palette.svg'); background-size: 150px; background-position: bottom -30px left -40px;">
+                             <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-purple-600">10:00 AM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">POSTER CARNIVAL</h4>
+                                <p class="text-gray-600 text-sm mt-2">A visually appealing mix of text, images, and diagrams.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/422023/maze-labyrinth-mark.svg'); background-size: 130px; background-position: bottom -20px right -30px;">
+                             <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-green-600">11:00 AM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">MIND MAZE</h4>
+                                <p class="text-gray-600 text-sm mt-2">A puzzle-solving challenge using hand gestures.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/509015/brain-gear.svg'); background-size: 140px; background-position: bottom -30px left -35px;">
+                             <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-red-600">12:00 PM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">BRAIN CHASE</h4>
+                                <p class="text-gray-600 text-sm mt-2">A thrilling puzzle game to test your wit and speed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/485949/food-kitchen-restaurant-utensils.svg'); background-size: 110px; background-position: bottom -15px right -20px;">
+                            <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-orange-600">01:00 PM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">LUNCH BREAK</h4>
+                                <p class="text-gray-600 text-sm mt-2">Time to refuel and connect with peers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                         <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/493725/presentation-podium.svg'); background-size: 120px; background-position: bottom -10px left -25px;">
+                            <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-gray-600">02:00 PM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">EXPERT TALK</h4>
+                                <p class="text-gray-600 text-sm mt-2">Insightful session from an industry expert.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background-image: url('https://www.svgrepo.com/show/493416/trophy.svg'); background-size: 130px; background-position: bottom -15px right -30px;">
+                            <div class="timeline-content-overlay">
+                                <span class="font-bold text-sm text-yellow-500">03:30 PM</span>
+                                <h4 class="text-xl font-bold text-gray-800 mt-1">VALEDICTORY & PRIZES</h4>
+                                <p class="text-gray-600 text-sm mt-2">Concluding ceremony and prize distribution.</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="bg-gray-800 text-white py-6">
