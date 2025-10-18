@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,17 +12,62 @@
     <meta name="description" content="Join the JNTU-GV EEE Department for the Faraday Memorial Day on Sep 22, 2025! A full day of exciting tech events like Innovista, Poster Carnival, and more. Register your team now!">
     <meta name="keywords" content="faraday, michael faraday, jntugv, eee events, jntugv eee, faraday events, jntu gv faraday, tech fest vizianagaram">
 
+    <!-- WebSite Structured Data for Site Name (homepage only) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "JNTU-GV EEE Events",
+      "url": "https://faraday-jntugv.vercel.app/",
+      "alternateName": ["JNTUGV Faraday"]
+    }
+    </script>
+
+    <!-- Event Structured Data (keep this as well) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Faraday Memorial Day 2025",
+      "startDate": "2025-09-22",
+      "endDate": "2025-09-22",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "JNTU-GV Campus",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vizianagaram",
+          "addressRegion": "Andhra Pradesh",
+          "addressCountry": "IN"
+        }
+      },
+      "image": [
+        "https://i.guim.co.uk/img/media/abffc68f38357082e669f2227a6310740d982f25/0_214_2710_1626/master/2710.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ba8e077ee3ba519b878dd7d94eb7c64f"
+       ],
+      "description": "A celebration of science and innovation, honoring the enduring legacy of Michael Faraday. Hosted by the Department of Electrical & Electronics Engineering at JNTU-GV.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "JNTU-GV Department of EEE",
+        "url": "https://jntugv.edu.in/"
+      }
+    }
+    </script>
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Faraday Memorial Day 2025 | JNTU-GV EEE Events">
     <meta property="og:description" content="Join us for a day of competitions and innovation celebrating Michael Faraday. Register now!">
     <meta property="og:image" content="https://i.guim.co.uk/img/media/abffc68f38357082e669f2227a6310740d982f25/0_214_2710_1626/master/2710.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ba8e077ee3ba519b878dd7d94eb7c64f">
     <meta property="og:url" content="https://faraday-jntugv.vercel.app/">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://faraday-jntugv.vercel.app/" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
+      <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa; 
